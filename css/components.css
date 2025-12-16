@@ -1,0 +1,155 @@
+/* Navigation */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+nav.scrolled {
+  background: rgba(250, 250, 250, 0.95);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: var(--black);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: var(--spacing-sm);
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Buttons */
+.cta-button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: var(--black);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  border: 1px solid var(--black);
+}
+
+.cta-button:hover {
+  background: transparent;
+  color: var(--black);
+}
+
+.product-cta {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border: 1px solid var(--black);
+  color: var(--black);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.product-cta:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+.submit-button {
+  padding: 1rem 2.5rem;
+  background: var(--white);
+  color: var(--black);
+  border: 1px solid var(--white);
+  font-size: 0.9rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+}
+
+.submit-button:hover {
+  background: transparent;
+  color: var(--white);
+}
+
+/* Cards */
+.highlight-card {
+  padding: var(--spacing-md);
+  background: var(--white);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.highlight-card.visible {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.highlight-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+}
+
+.highlight-card h3 {
+  margin-bottom: var(--spacing-xs);
+  font-weight: 400;
+}
+
+/* Footer */
+footer {
+  background: var(--black);
+  color: var(--warm-gray);
+  padding: var(--spacing-md);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav {
+    padding: var(--spacing-sm);
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+}

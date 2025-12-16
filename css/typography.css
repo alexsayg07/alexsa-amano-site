@@ -1,0 +1,21 @@
+/* Typography */
+h1, h2, h3 {
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+h1 { font-size: clamp(2.5rem, 8vw, 6rem); }
+h2 { font-size: clamp(2rem, 5vw, 4rem); }
+h3 { font-size: clamp(1.5rem, 3vw, 2.5rem); }
+
+p {
+  font-size: clamp(1rem, 2vw, 1.125rem);
+  line-height: 1.8;
+  color: var(--dark-gray);
+}
+
+.section-title {
+  margin-bottom: var(--spacing-md);
+  font-weight: 300;
+}
