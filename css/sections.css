@@ -345,6 +345,10 @@
     margin-right: auto;
   }
 
+  .hero-sup-tag {
+    margin-top: 0;
+  }
+
   .photo-frame {
     max-width: 320px;
     transform: rotate(1deg);
