@@ -1,21 +1,68 @@
-/* Typography */
-h1, h2, h3 {
-  font-weight: 300;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
+/* Dirtyline local font */
+@font-face {
+  font-family: 'Dirtyline';
+  src: url('../fonts/Dirtyline36Daysoftype2022.woff2') format('woff2'),
+       url('../fonts/Dirtyline36Daysoftype2022.woff')  format('woff'),
+       url('../fonts/Dirtyline36Daysoftype2022.ttf')   format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
-h1 { font-size: clamp(2.5rem, 8vw, 6rem); }
-h2 { font-size: clamp(2rem, 5vw, 4rem); }
-h3 { font-size: clamp(1.5rem, 3vw, 2.5rem); }
+/* Typography — Google Fonts loaded in <head> */
+
+h1, h2, h3, h4 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+  color: var(--black);
+}
+
+h1 { font-size: clamp(2.75rem, 8.5vw, 6.5rem); }
+h2 { font-size: clamp(2rem,    5vw,   3.5rem); }
+h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 
 p {
-  font-size: clamp(1rem, 2vw, 1.125rem);
-  line-height: 1.8;
-  color: var(--dark-gray);
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.85;
+  color: var(--gray);
 }
 
-.section-title {
-  margin-bottom: var(--spacing-md);
-  font-weight: 300;
+.accent-text {
+  color: var(--pink);
+}
+
+.dirtyline {
+  font-family: 'Dirtyline', sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.01em;
+}
+
+.hero-sup {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  color: var(--black);
+  text-transform: lowercase;
+}
+
+/* Italic within intro band */
+em {
+  font-style: italic;
+  color: inherit;
+  font-weight: 500;
+}
+
+/* Small all-caps label above section headings */
+.label {
+  display: inline-block;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--pink);
+  margin-bottom: 0.75rem;
 }
